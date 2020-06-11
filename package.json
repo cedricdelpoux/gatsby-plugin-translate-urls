@@ -1,0 +1,60 @@
+{
+  "name": "gatsby-plugin-translate-urls",
+  "version": "1.0.0",
+  "description": "Gatsby plugin to translate urls",
+  "repository": "https://github.com/cedricdelpoux/gatsby-plugin-translate-urls",
+  "author": {
+    "name": "Cédric Delpoux",
+    "email": "cedric.delpoux@gmail.com"
+  },
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "translate",
+    "intl",
+    "i18n",
+    "international",
+    "url",
+    "path",
+    "locale"
+  ],
+  "main": "index.js",
+  "files": [
+    "gatsby-browser.js",
+    "gatsby-node.js",
+    "gatsby-ssr.js",
+    "index.js"
+  ],
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-react": "^7.20.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "prettier": "1.19.1"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
+  },
+  "scripts": {
+    "lint": "eslint *.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ],
+    "*.{css,js,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "dependencies": {
+    "react": "^16.13.1"
+  }
+}

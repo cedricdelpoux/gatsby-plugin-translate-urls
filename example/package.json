@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "gatsby-plugin-translate-urls-example",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build --prefix-paths",
+    "deploy": "gh-pages -d public",
+    "dev": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "@lekoarts/gatsby-theme-minimal-blog": "^2.3.7",
+    "gatsby": "^2.20.36",
+    "gatsby-plugin-client-side-redirect": "^1.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
