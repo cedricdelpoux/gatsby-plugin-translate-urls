@@ -1,18 +1,18 @@
-const {getLocaleInPath, translateUrl} = require("./index.js")
+const {getPathLocale} = require("./utils/get-path-locale")
+const {translateUrl} = require("./utils/translate-url")
 
 exports.onCreatePage = ({page, actions: {createPage, deletePage}}, options) => {
   const locales = Object.keys(options.translations)
-  const localeInPath = getLocaleInPath({path: page.path, locales})
+  const pathLocale = getPathLocale(page.path)
 
-  if (localeInPath) {
+  if (pathLocale) {
     deletePage(page)
     const newPage = {
       ...page,
       context: {
         ...page.context,
-        locale: localeInPath,
+        locale: pathLocale,
         originalUrl: page.path,
-        localeRegex: new RegExp(`^/(${localeInPath})/`),
       },
     }
     createPage(newPage)
@@ -67,4 +67,22 @@ exports.createPages = ({actions: {createRedirect}}, options) => {
     redirectInBrowser: process.env.NODE_ENV === "development",
     statusCode: 301,
   })
+}
+
+exports.onCreateNode = ({node, actions: {createNodeField}}, options) => {
+  if (node.fields && node.fields.slug) {
+    const pathLocale = getPathLocale(node.fields.slug)
+
+    node.fields.slug = translateUrl({
+      path: node.fields.slug,
+      locale: pathLocale,
+      ...options,
+    })
+
+    createNodeField({
+      name: `locale`,
+      node,
+      value: getPathLocale(node.fields.slug),
+    })
+  }
 }

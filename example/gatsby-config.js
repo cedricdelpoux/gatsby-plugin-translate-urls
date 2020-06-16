@@ -1,24 +1,25 @@
-require(`dotenv`).config({
-  path: `.env`,
-})
-
 module.exports = {
-  pathPrefix: "/gatsby-plugin-translate-urls",
   siteMetadata: {
-    siteTitle: "gatsby-plugin-translate-urls",
-    siteTitleAlt: "gatsby-plugin-translate-urls - Gatsby Plugin",
-    author: "Cédric Delpoux",
+    title: `gatsby-plugin-translate-urls example`,
   },
   plugins: [
-    "@lekoarts/gatsby-theme-minimal-blog",
     {
-      // gatsby-plugin-translate-urls
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/posts`,
+      },
+    },
+    "gatsby-transformer-remark",
+    "gatsby-plugin-slug",
+    {
+      //resolve: "gatsby-plugin-translate-urls"
       resolve: require.resolve(`..`),
       options: {
         translations: {
           // import JS or JSON files
-          en: require("./src/translations/en.js"),
-          fr: require("./src/translations/fr.json"),
+          en: require(`${__dirname}/translations/en.json`),
+          fr: require(`${__dirname}/translations/fr.json`),
         },
         prefix: "urls.",
       },

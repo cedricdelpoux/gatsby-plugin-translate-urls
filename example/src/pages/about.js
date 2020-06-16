@@ -1,15 +1,14 @@
-import React, {useContext} from "react"
+import {FormattedMessage} from "react-intl"
+import Layout from "../components/layout"
+import React from "react"
 
-import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout"
-import {Link} from "gatsby"
-import {TranslateUrlsContext} from "../../../index.js"
-
-export default ({pageContext}) => {
-  const intl = useContext(TranslateUrlsContext)
+export default () => {
   return (
     <Layout>
-      <h1>About | {pageContext.locale}</h1>
-      <Link to={intl.translateUrl("/")}>Go to Home</Link>
+      <h1>
+        <FormattedMessage id="pages.about.title" />
+      </h1>
+      <FormattedMessage id="pages.about.content" />
     </Layout>
   )
 }

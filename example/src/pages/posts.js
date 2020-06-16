@@ -1,36 +1,45 @@
-import Layout from "@lekoarts/gatsby-theme-minimal-blog/src/components/layout"
-import Listing from "@lekoarts/gatsby-theme-minimal-blog/src/components/listing"
+import {FormattedMessage} from "react-intl"
+import Layout from "../components/layout"
+import {Link} from "gatsby"
 import React from "react"
 import {graphql} from "gatsby"
 
-export default ({pageContext, data}) => {
+export default ({data}) => {
   return (
     <Layout>
-      <h1>Posts | {pageContext.locale}</h1>
-      {data.allPost.nodes.length > 0 ? (
-        <Listing posts={data.allPost.nodes} showTags={false} />
+      <h1>
+        <FormattedMessage id="pages.posts.title" />
+      </h1>
+      {data.allMarkdownRemark.nodes.length > 0 ? (
+        <>
+          <FormattedMessage id="pages.posts.list" />
+          <ul>
+            {data.allMarkdownRemark.nodes.map(({frontmatter, fields}) => (
+              <li key={fields.slug}>
+                <Link to={fields.slug}>{frontmatter.title}</Link>
+              </li>
+            ))}
+          </ul>
+        </>
       ) : (
-        "No posts in " + pageContext.locale
+        <FormattedMessage id="pages.posts.empty" />
       )}
     </Layout>
   )
 }
 
 export const query = graphql`
-  query Posts($localeRegex: String!) {
-    allPost(
-      sort: {fields: date, order: DESC}
-      filter: {slug: {regex: $localeRegex}}
+  query Posts($locale: String!) {
+    allMarkdownRemark(
+      filter: {fields: {locale: {eq: $locale}}}
+      sort: {fields: frontmatter___date, order: DESC}
     ) {
       nodes {
-        slug
-        title
-        date(formatString: "MMMM Do, YYYY")
-        excerpt
-        timeToRead
-        description
-        tags {
-          name
+        frontmatter {
+          title
+          date(formatString: "Do MMMM YYYY", locale: $locale)
+        }
+        fields {
           slug
         }
       }

@@ -56,7 +56,18 @@ module.exports = {
 
 4. Translate urls in your pages
 
-`src/pages/about.js`:
+Most of the time, you only need the `TranslatedLink` component. It will transform the url passed to `to` prop.
+
+```js
+import React from "react"
+import {TranslatedLink} from "gatsby-plugin-translate-urls"
+
+export default () => {
+  return <TranslatedLink to="/posts">Posts FR</TranslatedLink>
+}
+```
+
+For most advanced cases or if you want to use the original `gatsby` link, you can use `TranslateUrlsContext` to get some useful data:
 
 ```js
 import React, {useContext} from "react"
@@ -72,11 +83,9 @@ export default () => {
   } = useContext(TranslateUrlsContext)
   return (
     <>
-      <Link to={translateUrl("/")}>Home FR</Link>
-      <Link to={translateUrl("/posts")}>Posts FR</Link>
       <Link to={translateUrl(originalUrl)}>About FR</Link>
       <Link to={translateUrl(originalUrl, "en")}>About EN</Link>
-      {"All localized /about pages"}
+      {"All localized /about pages:"}
       {locales.map(lang => <Link key={lang}to={translateUrl(originalUrl, lang)}>About {lang}<)}
       /Link>
     </>

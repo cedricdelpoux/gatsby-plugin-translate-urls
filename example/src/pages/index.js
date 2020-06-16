@@ -6,9 +6,9 @@ export default () => {
   return (
     <Layout>
       <h1>
-        <FormattedMessage id="pages.404.title" />
+        <FormattedMessage id="pages.home.title" />
       </h1>
-      <FormattedMessage id="pages.404.content" />
+      <FormattedMessage id="pages.home.content" />
     </Layout>
   )
 }

@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-translate-urls",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.1",
   "description": "Gatsby plugin to translate urls",
   "repository": "https://github.com/cedricdelpoux/gatsby-plugin-translate-urls",
   "author": {
@@ -25,7 +25,8 @@
     "gatsby-browser.js",
     "gatsby-node.js",
     "gatsby-ssr.js",
-    "index.js"
+    "index.js",
+    "utils"
   ],
   "devDependencies": {
     "eslint": "^6.8.0",
@@ -53,8 +54,5 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "dependencies": {
-    "react": "^16.13.1"
   }
 }
