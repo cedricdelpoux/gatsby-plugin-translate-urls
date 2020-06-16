@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-translate-urls-example",
-  "version": "0.0.0",
+  "private": true,
   "license": "MIT",
   "dependencies": {
     "gatsby": "^2.20.36",
