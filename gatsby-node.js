@@ -9,6 +9,11 @@ exports.onCreatePage = ({page, actions: {createPage, deletePage}}, options) => {
     deletePage(page)
     const newPage = {
       ...page,
+      path: translateUrl({
+        path: page.path,
+        locale: pathLocale,
+        ...options,
+      }),
       context: {
         ...page.context,
         locale: pathLocale,
