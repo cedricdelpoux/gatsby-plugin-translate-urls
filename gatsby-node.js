@@ -69,8 +69,8 @@ exports.createPages = ({actions: {createRedirect}}, options) => {
     Language: fallbackLocale,
     isPermanent: true,
     exactPath: true,
+    force: true,
     redirectInBrowser: process.env.NODE_ENV === "development",
-    statusCode: 301,
   })
 }
 
