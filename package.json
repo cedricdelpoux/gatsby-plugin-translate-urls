@@ -1,6 +1,6 @@
 {
   "name": "gatsby-plugin-translate-urls",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "Gatsby plugin to translate urls",
   "repository": "https://github.com/cedricdelpoux/gatsby-plugin-translate-urls",
   "author": {
