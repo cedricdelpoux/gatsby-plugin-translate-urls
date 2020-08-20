@@ -1,6 +1,8 @@
 const {getPathLocale} = require("./get-path-locale")
+const {removeLocaleFromPath} = require("./remove-locale-from-path")
+const {removeTrailingSlash} = require("./remove-trailing-slash")
 
-const translateUrl = ({path, locale, translations, prefix}) => {
+const translateUrl = ({path, locale, translations, prefix, defaultLocale}) => {
   if (!path) {
     return "/" + locale || ""
   }
@@ -8,34 +10,38 @@ const translateUrl = ({path, locale, translations, prefix}) => {
   if (!locale || !translations[locale] || path.startsWith("/dev-404-page")) {
     return path
   }
-
+  const isDefaultLocale = defaultLocale && defaultLocale === locale
   const pathLocale = getPathLocale(path)
 
   if (pathLocale && pathLocale !== locale) {
-    return "/" + locale
-  }
-  //
-  // if (pathLocale) {
-  //   if (pathLocale === locale) {
-  //     return path
-  //   } else {
-  //     return "/" + locale
-  //   }
-  // }
+    const newPath = "/" + locale
 
-  const translatedPath = path
+    if (isDefaultLocale) {
+      return removeLocaleFromPath(newPath, defaultLocale)
+    }
+
+    return newPath
+  }
+
+  let translatedPath = path
     .split("/")
-    .map(key => translations[locale][prefix + key] || key)
+    .map((key) => translations[locale][prefix + key] || key)
     .join("/")
-    // Remove trailing slash
-    .replace(/\/$/, ``)
 
   if (pathLocale) {
-    return translatedPath
+    if (isDefaultLocale) {
+      translatedPath = removeLocaleFromPath(translatedPath, pathLocale)
+    }
+
+    return removeTrailingSlash(translatedPath)
+  }
+
+  if (isDefaultLocale) {
+    return removeTrailingSlash(translatedPath)
   }
 
   const localizedPath = `/${locale}${translatedPath}`
-  return localizedPath
+  return removeTrailingSlash(localizedPath)
 }
 
 module.exports = {

@@ -4,22 +4,25 @@ const {translateUrl} = require("./utils/translate-url")
 exports.onCreatePage = ({page, actions: {createPage, deletePage}}, options) => {
   const locales = Object.keys(options.translations)
   const pathLocale = getPathLocale(page.path)
+  const contextLocale = page.context.locale
 
-  if (pathLocale) {
+  if (pathLocale || contextLocale) {
+    const locale = pathLocale || contextLocale
     deletePage(page)
     const newPage = {
       ...page,
       path: translateUrl({
         path: page.path,
-        locale: pathLocale,
+        locale,
         ...options,
       }),
       context: {
         ...page.context,
-        locale: pathLocale,
+        locale,
         originalUrl: page.path,
       },
     }
+
     createPage(newPage)
 
     return
@@ -28,12 +31,16 @@ exports.onCreatePage = ({page, actions: {createPage, deletePage}}, options) => {
   const isPage404 = page.path.match(/^\/?404\/?$/)
 
   if (isPage404) {
+    if (options.defaultLocale) {
+      // 404 page already exist by default
+      return
+    }
     page.matchPath = `/*`
   } else {
     deletePage(page)
   }
 
-  locales.forEach(locale => {
+  locales.forEach((locale) => {
     const translatedPath = translateUrl({
       path: page.path,
       locale,
@@ -53,41 +60,49 @@ exports.onCreatePage = ({page, actions: {createPage, deletePage}}, options) => {
         ...newPage.context,
         locale,
         originalUrl: page.path,
-        localeRegex: `^/(${locale})/`,
       },
     })
   })
 }
 
 exports.createPages = ({actions: {createRedirect}}, options) => {
-  const locales = Object.keys(options.translations)
-  const fallbackLocale = locales[0]
+  if (!options.defaultLocale) {
+    const locales = Object.keys(options.translations)
+    const fallbackLocale = locales[0]
 
-  createRedirect({
-    fromPath: "/",
-    toPath: `/${fallbackLocale}`,
-    Language: fallbackLocale,
-    isPermanent: true,
-    exactPath: true,
-    force: true,
-    redirectInBrowser: process.env.NODE_ENV === "development",
-  })
+    createRedirect({
+      fromPath: "/",
+      toPath: `/${fallbackLocale}`,
+      Language: fallbackLocale,
+      isPermanent: true,
+      exactPath: true,
+      force: true,
+      redirectInBrowser: process.env.NODE_ENV === "development",
+    })
+  }
 }
 
 exports.onCreateNode = ({node, actions: {createNodeField}}, options) => {
   if (node.fields && node.fields.slug) {
     const pathLocale = getPathLocale(node.fields.slug)
+    const path = node.fields.slug
 
     node.fields.slug = translateUrl({
-      path: node.fields.slug,
+      path,
       locale: pathLocale,
       ...options,
     })
 
     createNodeField({
+      name: `path`,
+      node,
+      value: path,
+    })
+
+    createNodeField({
       name: `locale`,
       node,
-      value: getPathLocale(node.fields.slug),
+      value: pathLocale || options.defaultLocale,
     })
   }
 }

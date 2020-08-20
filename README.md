@@ -46,8 +46,10 @@ module.exports = {
           fr: require("./src/translations/fr.json"),
         },
         // OPTIONAL
-        // default: ""
-        prefix: "urls.",
+        // To remove the default locale from urls
+        defaultLocale: "en"
+        // prefix in translations files
+        prefix: "urls.", // default: ""
       },
     },
   ],
