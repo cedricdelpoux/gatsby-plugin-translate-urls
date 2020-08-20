@@ -4,6 +4,22 @@
 
 `gatsby-plugin-translate-urls` is a [Gatsby](https://www.gatsbyjs.org/) plugin to translate urls
 
+You ave two choices:
+
+1. all locales in urls
+
+- yoursite.com/en
+- yoursite.com/fr
+- yoursite.com/es
+
+2. locales in urls except the default locale:
+
+> You need to set the `defaultLocale` option
+
+- yoursite.com
+- yoursite.com/fr
+- yoursite.com/es
+
 ## Usage
 
 1. Download `gatsby-plugin-translate-urls` from the NPM registry:
