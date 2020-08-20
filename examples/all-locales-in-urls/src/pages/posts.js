@@ -1,9 +1,8 @@
 import {FormattedMessage} from "react-intl"
-import Layout from "../components/layout"
-import {Link} from "gatsby"
+import {Link, graphql} from "gatsby"
 import React from "react"
-import {graphql} from "gatsby"
 
+import Layout from "../components/layout"
 export default ({data}) => {
   return (
     <Layout>

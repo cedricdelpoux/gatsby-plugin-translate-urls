@@ -1,7 +1,7 @@
 import {NavLocales} from "./nav-locales"
 import {NavPages} from "./nav-pages"
 import React from "react"
-import {TranslatedLink} from "../../../index.js"
+import {TranslatedLink} from "../../../../index.js" // gatsby-plugin-translate-urls
 
 const Header = ({siteTitle}) => {
   return (

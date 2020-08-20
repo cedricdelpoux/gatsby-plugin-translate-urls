@@ -1,4 +1,4 @@
-const path = require("path")
+const {resolve} = require("path")
 
 exports.createPages = async ({graphql, actions: {createPage}, reporter}) => {
   const result = await graphql(
@@ -8,6 +8,7 @@ exports.createPages = async ({graphql, actions: {createPage}, reporter}) => {
           nodes {
             fields {
               slug
+              path
               locale
             }
           }
@@ -23,10 +24,10 @@ exports.createPages = async ({graphql, actions: {createPage}, reporter}) => {
   const {allMarkdownRemark} = result.data
 
   if (allMarkdownRemark) {
-    allMarkdownRemark.nodes.forEach(({fields: {slug, locale}}) => {
+    allMarkdownRemark.nodes.forEach(({fields: {path, slug, locale}}) => {
       createPage({
-        path: slug,
-        component: path.resolve("src/templates/post.js"),
+        path,
+        component: resolve("src/templates/post.js"),
         context: {
           slug,
           locale,

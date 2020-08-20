@@ -2,7 +2,7 @@ import React, {useContext} from "react"
 
 import Layout from "../components/layout"
 import {Link} from "gatsby"
-import {TranslateUrlsContext} from "../../../index.js"
+import {TranslateUrlsContext} from "../../../../index.js" // gatsby-plugin-translate-urls
 import {graphql} from "gatsby"
 
 export default ({data: {post}}) => {
@@ -12,7 +12,11 @@ export default ({data: {post}}) => {
       <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{__html: post.html}} />
       <hr />
-      <Link to={intl.translateUrl("/")}>Go to Home</Link>
+      <Link to={intl.translateUrl("/posts")}>
+        <span role="img" aria-label="back">
+          ⏪
+        </span>
+      </Link>
     </Layout>
   )
 }

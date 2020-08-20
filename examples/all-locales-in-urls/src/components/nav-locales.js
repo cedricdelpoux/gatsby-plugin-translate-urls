@@ -1,13 +1,13 @@
 import React, {useContext} from "react"
 
 import {Link} from "gatsby"
-import {TranslateUrlsContext} from "../../../index.js"
+import {TranslateUrlsContext} from "../../../../index.js" // gatsby-plugin-translate-urls
 
 export const NavLocales = () => {
   const {translateUrl, locales, originalUrl} = useContext(TranslateUrlsContext)
   return (
     <nav>
-      {locales.map(locale => {
+      {locales.map((locale) => {
         return (
           <Link
             key={locale}

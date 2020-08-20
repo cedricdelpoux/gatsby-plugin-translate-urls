@@ -1,0 +1,14 @@
+{
+  "urls.about": "a-propos",
+  "urls.posts": "articles",
+  "urls.code": "programmation",
+  "pages.404.title": "Page inconnue",
+  "pages.404.content": "Cette page n'existe pas. Essayez une autre url",
+  "pages.home.title": "Accueil",
+  "pages.home.content": "Contenu",
+  "pages.about.title": "À propos",
+  "pages.about.content": "Contenu",
+  "pages.posts.title": "Articles",
+  "pages.posts.list": "Liste d'articles",
+  "pages.posts.empty": "Aucun articles"
+}

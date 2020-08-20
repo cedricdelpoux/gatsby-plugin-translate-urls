@@ -14,7 +14,7 @@ module.exports = {
     "gatsby-plugin-slug",
     {
       //resolve: "gatsby-plugin-translate-urls"
-      resolve: require.resolve(`..`),
+      resolve: require.resolve(`../..`),
       options: {
         translations: {
           // import JS or JSON files

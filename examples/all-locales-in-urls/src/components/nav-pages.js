@@ -1,6 +1,6 @@
 import {FormattedMessage} from "react-intl"
 import React from "react"
-import {TranslatedLink} from "../../../index.js"
+import {TranslatedLink} from "../../../../index.js" // gatsby-plugin-translate-urls
 
 export const NavPages = () => {
   return (
