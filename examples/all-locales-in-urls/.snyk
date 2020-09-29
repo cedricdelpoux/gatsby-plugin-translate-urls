@@ -3506,3 +3506,45 @@ patch:
         patched: '2020-09-29T05:27:11.524Z'
     - gatsby > gatsby-admin > gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > babel-preset-fbjs > @babel/plugin-proposal-class-properties > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
         patched: '2020-09-29T05:27:11.524Z'
+    - snyk > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - gatsby > gatsby-cli > gatsby-recipes > concurrently > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - gatsby > gatsby-cli > gatsby-recipes > contentful-management > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - gatsby > gatsby-cli > gatsby-recipes > formik > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - gatsby > gatsby-cli > gatsby-recipes > yup > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-cpp-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-go-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-gradle-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-php-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-python-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-gradle-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - snyk > snyk-mvn-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - gatsby > gatsby-cli > gatsby-recipes > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
+    - gatsby > gatsby-cli > gatsby-recipes > @emotion/core > @emotion/css > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2020-09-29T05:37:04.952Z'
