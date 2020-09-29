@@ -3506,45 +3506,117 @@ patch:
         patched: '2020-09-29T05:27:11.524Z'
     - gatsby > gatsby-admin > gatsby > gatsby-cli > gatsby-recipes > graphql-tools > @graphql-tools/relay-operation-optimizer > relay-compiler > babel-preset-fbjs > @babel/plugin-proposal-class-properties > @babel/helper-create-class-features-plugin > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
         patched: '2020-09-29T05:27:11.524Z'
+    - gatsby-transformer-remark > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > css-loader > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > devcert > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > eslint > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > eslint-plugin-flowtype > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > eslint-plugin-graphql > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > webpack-merge > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby-transformer-remark > sanitize-html > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > @typescript-eslint/parser > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-eslint > @babel/types > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-eslint > @babel/traverse > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > eslint > inquirer > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > eslint > table > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > eslint-plugin-graphql > graphql-config > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > optimize-css-assets-webpack-plugin > last-call-webpack-plugin > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > react-dev-utils > inquirer > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > webpack-dev-server > http-proxy-middleware > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-go-plugin > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > @typescript-eslint/eslint-plugin > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > @typescript-eslint/parser > @typescript-eslint/experimental-utils > @typescript-eslint/typescript-estree > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-eslint > @babel/traverse > @babel/types > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-eslint > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > gatsby-cli > yurnalist > inquirer > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > eslint-plugin-graphql > graphql-config > graphql-import > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
     - gatsby > gatsby-cli > gatsby-recipes > concurrently > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - gatsby > gatsby-cli > gatsby-recipes > contentful-management > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - gatsby > gatsby-cli > gatsby-recipes > formik > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - gatsby > gatsby-cli > gatsby-recipes > yup > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > webpack-dev-server > portfinder > async > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - snyk > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-cpp-plugin > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-go-plugin > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-gradle-plugin > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-docker-plugin > snyk-nodejs-lockfile-parser > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-mvn-plugin > @snyk/java-call-graph-builder > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
-    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-eslint > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-eslint > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-eslint > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-preset-gatsby > @babel/preset-env > @babel/preset-modules > @babel/types > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-php-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-python-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-gradle-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
     - snyk > snyk-mvn-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-eslint > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-eslint > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
     - gatsby > gatsby-cli > gatsby-recipes > @emotion/styled > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-preset-gatsby > @babel/preset-env > @babel/preset-modules > @babel/plugin-proposal-unicode-property-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-preset-gatsby > @babel/preset-env > @babel/preset-modules > @babel/plugin-transform-dotall-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-preset-gatsby > @babel/preset-env > @babel/preset-modules > @babel/plugin-proposal-unicode-property-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-annotate-as-pure > @babel/types > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
+    - gatsby > babel-preset-gatsby > @babel/preset-env > @babel/preset-modules > @babel/plugin-transform-dotall-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-annotate-as-pure > @babel/types > lodash:
+        patched: '2020-09-29T05:39:44.635Z'
     - gatsby > gatsby-cli > gatsby-recipes > @emotion/core > @emotion/css > babel-plugin-emotion > @babel/helper-module-imports > @babel/types > lodash:
-        patched: '2020-09-29T05:37:04.952Z'
+        patched: '2020-09-29T05:39:44.635Z'
