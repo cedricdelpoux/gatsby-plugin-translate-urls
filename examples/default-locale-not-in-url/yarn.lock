@@ -5764,6 +5764,10 @@ gatsby-plugin-slug@^1.1.1:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-slug/-/gatsby-plugin-slug-1.1.1.tgz#2628c8256909b9c166717096ec7e701a91392b67"
   integrity sha512-7S0vz/nTcTsgpKims8zNgUd4pNcAYjsuUKUzylvPM1TZVUsEsbB9kzQ8vx4uR4Fo3DSciVoynj+1Sn29fZXx7w==
 
+"gatsby-plugin-translate-urls@link:../..":
+  version "0.0.0"
+  uid ""
+
 gatsby-plugin-typescript@^2.4.21:
   version "2.4.21"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.4.21.tgz#dabce631504351e28558028fb8ae23a8018f7672"
@@ -10212,15 +10216,9 @@ react-dev-utils@^4.2.3:
     strip-ansi "3.0.1"
     text-table "0.2.0"
 
-react-dom@^16.13.1:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
-  integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.19.1"
+"react-dom@link:../../node_modules/react-dom":
+  version "0.0.0"
+  uid ""
 
 react-error-overlay@^3.0.0:
   version "3.0.0"
@@ -10345,7 +10343,7 @@ react-style-singleton@^2.1.0:
     invariant "^2.2.4"
     tslib "^1.0.0"
 
-react@^16.13.1, react@^16.8.0:
+react@^16.8.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
@@ -10353,6 +10351,10 @@ react@^16.13.1, react@^16.8.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.2"
+
+"react@link:../../node_modules/react":
+  version "0.0.0"
+  uid ""
 
 read-chunk@^3.2.0:
   version "3.2.0"

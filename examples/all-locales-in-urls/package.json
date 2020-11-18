@@ -8,8 +8,8 @@
     "gatsby-plugin-slug": "^1.1.1",
     "gatsby-source-filesystem": "^2.3.31",
     "gatsby-transformer-remark": "^2.8.36",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "link:../../node_modules/react",
+    "react-dom": "link:../../node_modules/react-dom",
     "react-intl": "^5.8.3"
   },
   "devDependencies": {
@@ -20,9 +20,6 @@
     "deploy": "gh-pages -d public",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "snyk-protect": "snyk protect",
-    "prepare": "yarn run snyk-protect"
-  },
-  "snyk": true
+    "clean": "gatsby clean"
+  }
 }
