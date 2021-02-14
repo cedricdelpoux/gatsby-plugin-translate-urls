@@ -11,7 +11,7 @@ exports.wrapPageElement = ({element, props}, options) => {
     <TranslateUrlsContext.Provider
       value={{
         locales,
-        locale: currentLocale,
+        locale: currentLocale || fallbackLocale,
         originalUrl,
         translateUrl: (path, locale) => {
           return translateUrl({
