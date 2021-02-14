@@ -18,6 +18,7 @@ const translateUrl = ({path, locale, translations, prefix, defaultLocale}) => {
   const isDefaultLocale = defaultLocale && defaultLocale === locale
   const pathLocale = getPathLocale(path)
 
+  // for auto generated pages which are not existing in other locales
   if (pathLocale && pathLocale !== locale) {
     const newPath = "/" + locale
 
