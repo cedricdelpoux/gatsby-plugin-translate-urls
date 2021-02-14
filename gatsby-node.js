@@ -50,7 +50,7 @@ exports.onCreatePage = ({page, actions: {createPage, deletePage}}, options) => {
     const newPage = {
       ...page,
       path: translatedPath,
-      // 404 localized page should math all pages from the same locale
+      // 404 localized page should match all pages from the same locale
       matchPath: isPage404 ? `/${locale}/*` : page.path.matchPath,
     }
 
