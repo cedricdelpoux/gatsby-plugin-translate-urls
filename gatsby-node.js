@@ -70,6 +70,9 @@ exports.createPages = ({actions: {createRedirect}}, options) => {
     const locales = Object.keys(options.translations)
     const fallbackLocale = locales[0]
 
+    // Generates a console error although correctly redirecting
+    // https://github.com/gatsbyjs/gatsby/issues/18665
+    // The route "/" matches both a page and a redirect; this is probably not intentional.
     createRedirect({
       fromPath: "/",
       toPath: `/${fallbackLocale}`,

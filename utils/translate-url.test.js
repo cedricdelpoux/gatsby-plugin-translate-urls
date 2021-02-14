@@ -124,19 +124,6 @@ const callsDefaultLocaleFr = [
   ["/fr/post-fr-2", "fr", "/post-fr-2"],
 ]
 
-/*
-Errors when calling "/" without "defaultLocale":
-  The route "/" matches both a page and a redirect; this is probably not intentional.
-  The route "/" matches both a page and a redirect; this is probably not intentional.
-  [@formatjs/intl Error INVALID_CONFIG] "locale" was not configured, using "en" as fallback.
-  [@formatjs/intl Error MISSING_TRANSLATION] Missing message: "pages.home.title" for locale "en", using id as fallback.
-  [@formatjs/intl Error MISSING_TRANSLATION] Missing message: "pages.posts.title" for locale "en", using id as fallback.
-  [@formatjs/intl Error MISSING_TRANSLATION] Missing message: "pages.about.title" for locale "en", using id as fallback.
-  [@formatjs/intl Error MISSING_TRANSLATION] Missing message: "pages.404.title" for locale "en", using id as fallback.
-  [@formatjs/intl Error MISSING_TRANSLATION] Missing message: "pages.404.content" for locale "en", using id as fallback.
-  The route "/" matches both a page and a redirect; this is probably not intentional.
-*/
-
 describe("translateUrl", () => {
   test("should process input which is invalid or has to be ignored", () => {
     expect(util.translateUrl({})).toBe("/")
