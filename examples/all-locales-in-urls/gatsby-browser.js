@@ -4,15 +4,18 @@ import messagesEn from "./translations/en.json"
 import messagesFr from "./translations/fr.json"
 
 const messages = {
-  fr: messagesFr,
   en: messagesEn,
+  fr: messagesFr,
 }
 
 export const wrapPageElement = ({element, props}) => {
+  const {locale: currentLocale} = props.pageContext
+  const fallbackLocale = "en"
+
   return (
     <IntlProvider
-      locale={props.pageContext.locale}
-      messages={messages[props.pageContext.locale]}
+      locale={currentLocale || fallbackLocale}
+      messages={messages[currentLocale] || messages[fallbackLocale]}
     >
       {element}
     </IntlProvider>

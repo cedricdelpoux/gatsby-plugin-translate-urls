@@ -4,15 +4,21 @@ const {removeTrailingSlash} = require("./remove-trailing-slash")
 
 const translateUrl = ({path, locale, translations, prefix, defaultLocale}) => {
   if (!path) {
-    return "/" + locale || ""
+    return "/" + (locale || "")
   }
 
-  if (!locale || !translations[locale] || path.startsWith("/dev-404-page")) {
+  if (
+    !locale ||
+    !translations ||
+    !translations[locale] ||
+    path.startsWith("/dev-404-page")
+  ) {
     return path
   }
   const isDefaultLocale = defaultLocale && defaultLocale === locale
   const pathLocale = getPathLocale(path)
 
+  // for auto generated pages which are not existing in other locales
   if (pathLocale && pathLocale !== locale) {
     const newPath = "/" + locale
 
