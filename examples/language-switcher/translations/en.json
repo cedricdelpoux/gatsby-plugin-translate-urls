@@ -1,0 +1,18 @@
+{
+  "urls.about": "about",
+  "urls.posts": "posts",
+  "urls.code": "code",
+  "pages.404.title": "Unknown page",
+  "pages.404.content": "This page does not exist. You should try an other url",
+  "pages.home.title": "Home",
+  "pages.home.content": "Home content",
+  "pages.about.title": "About",
+  "pages.about.content": "About page content",
+  "pages.posts.title": "Posts",
+  "pages.posts.list": "Posts list",
+  "pages.posts.empty": "No post found",
+  "pages.products.title": "Products",
+  "pages.products.list": "Products list",
+  "pages.products.empty": "No product found",
+  "trousers": "Trousers"
+}
