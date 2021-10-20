@@ -1,19 +1,8 @@
 const {getPathLocale} = require("./get-path-locale")
 const {removeLocaleFromPath} = require("./remove-locale-from-path")
-const {removeTrailingSlash: removeSlash} = require("./remove-trailing-slash")
+const {removeTrailingSlash} = require("./remove-trailing-slash")
 
-const translateUrl = ({
-  path,
-  locale,
-  translations,
-  prefix,
-  defaultLocale,
-  preserveTrailingSlash,
-}) => {
-  function removeTrailingSlash(path) {
-    return preserveTrailingSlash ? path : removeSlash(path)
-  }
-
+const translateUrl = ({path, locale, translations, prefix, defaultLocale}) => {
   if (!path) {
     return "/" + (locale || "")
   }
