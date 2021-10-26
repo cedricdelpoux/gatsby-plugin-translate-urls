@@ -61,6 +61,29 @@ const translateUrl = ({
   return removeTrailingSlash(localizedPath)
 }
 
+// We don't want to have /404.html/ directory with index.html inside. 404.html should stay as it is.
+const defaultExcludedPaths = [`/404.html`]
+
+const translateUrlWithSlashValidator = ({
+  forceTrailingSlash,
+  trailingSlashExcludedPaths = defaultExcludedPaths,
+  ...rest
+}) => {
+  let url = translateUrl(rest)
+  if (
+    forceTrailingSlash &&
+    !trailingSlashExcludedPaths.includes(url) &&
+    url[url.length - 1] !== "/"
+  ) {
+    // Remove the hash to prevent /route/#/ or /route#/
+    if (url[url.length - 1] === "#") {
+      url = url.substring(0, url.length - 1)
+    }
+    url += "/"
+  }
+  return url
+}
+
 module.exports = {
-  translateUrl,
+  translateUrl: translateUrlWithSlashValidator,
 }
