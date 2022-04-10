@@ -5764,10 +5764,6 @@ gatsby-plugin-slug@^1.1.1:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-slug/-/gatsby-plugin-slug-1.1.1.tgz#2628c8256909b9c166717096ec7e701a91392b67"
   integrity sha512-7S0vz/nTcTsgpKims8zNgUd4pNcAYjsuUKUzylvPM1TZVUsEsbB9kzQ8vx4uR4Fo3DSciVoynj+1Sn29fZXx7w==
 
-"gatsby-plugin-translate-urls@link:../..":
-  version "0.0.0"
-  uid ""
-
 gatsby-plugin-typescript@^2.4.21:
   version "2.4.21"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-typescript/-/gatsby-plugin-typescript-2.4.21.tgz#dabce631504351e28558028fb8ae23a8018f7672"
@@ -8539,9 +8535,9 @@ mkdirp@^1.0.4:
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
 moment@^2.27.0:
-  version "2.29.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.0.tgz#fcbef955844d91deb55438613ddcec56e86a3425"
-  integrity sha512-z6IJ5HXYiuxvFTI6eiQ9dm77uE0gyy1yXNApVHqTcnIKfY9tIwEjlzsZ6u1LQXvVgKeTnv9Xm7NDvJ7lso3MtA==
+  version "2.29.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.2.tgz#00910c60b20843bcba52d37d58c628b47b1f20e4"
+  integrity sha512-UgzG4rvxYpN15jgCmVJwac49h9ly9NurikMWGPdVxm8GZD6XjkKPxDTjQQ43gtGgnV3X0cAyWDdP2Wexoquifg==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
@@ -10218,7 +10214,6 @@ react-dev-utils@^4.2.3:
 
 "react-dom@link:../../node_modules/react-dom":
   version "0.0.0"
-  uid ""
 
 react-error-overlay@^3.0.0:
   version "3.0.0"
@@ -10354,7 +10349,6 @@ react@^16.8.0:
 
 "react@link:../../node_modules/react":
   version "0.0.0"
-  uid ""
 
 read-chunk@^3.2.0:
   version "3.2.0"
